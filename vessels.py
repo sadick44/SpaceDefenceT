@@ -1,7 +1,7 @@
 class Vessels:
     def __int__(self, name, coordinates=(0, 0)):
         self.name = name
-        self.coordinates = None
+        self.coordinates = self.coordinates
 
     def moveTowards(self, x, y):
         self.coordinates = (x, y)
@@ -35,7 +35,3 @@ class OffensiveCraft(Vessels):
 class CommandShip(OffensiveCraft):
     def __init__(self, name, coordinates=(0, 0), cannons=24):
         super().__init__(name, coordinates, "Command Ship", cannons)
-
-
-
-
