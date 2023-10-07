@@ -1,0 +1,12 @@
+- 50 vessels
+- 2 type of vessels: support craft and offensive craft
+
+- 3 type of support craft (receive orders ...):
+    * refueling,
+    * mechanical assistance
+    * cargo
+
+ - 3 type of offensive craft (all receive attack command and can raise shields):
+    * battleships have 12 canons
+    * cruisers have 6 canons
+    * destroyers have 12 canons

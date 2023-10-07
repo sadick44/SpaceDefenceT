@@ -1,0 +1,7 @@
+This file is for answering algorithmic questions as mentionned in the document:
+
+Part 2:
+    - Since I am just defining a set of datastructures to represent fleet with involvement any other operation, then the complexity will be:
+    O(1) as the question consists of adding new vessel
+
+Part 3:
