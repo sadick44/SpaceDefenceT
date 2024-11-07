@@ -28,7 +28,6 @@ def display_word(generated_word, empty_word, guess):
     return empty_word
             
 
-
 def main():
 
     lines = []
