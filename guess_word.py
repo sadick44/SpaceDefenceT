@@ -26,10 +26,7 @@ def display_word(generated_word, empty_word, guess):
         empty_word.replace('-', guess.lower())
 
     return empty_word
-
-
-def check_revert(games, new_game):
-    return True if new_game in games else False
+            
 
 def main():
 
