@@ -31,7 +31,6 @@ def display_word(generated_word, empty_word, guess):
 def check_revert(games, new_game):
     return True if new_game in games else False
 
-
 def main():
 
     lines = []
