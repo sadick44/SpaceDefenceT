@@ -11,7 +11,7 @@ for fleet in range(fleet_lenght):
 
 
 # We need to find out the type different type ships that are close to each other and paur them
-
+# 0684668072
 
 def distance_between_ships(ship1, ship2):
     return abs(ship1["x"] - ship2["x"]) + abs(ship1["y"] - ship2["y"])

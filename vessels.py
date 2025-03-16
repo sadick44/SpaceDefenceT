@@ -1,37 +1,97 @@
-class Vessels:
-    def __int__(self, name, coordinates=(0, 0)):
-        self.name = name
-        self.coordinates = self.coordinates
+#This method is for implementing a dice roll
 
-    def moveTowards(self, x, y):
-        self.coordinates = (x, y)
+import random
 
-    def __str__(self):
-        return f"Vessel {self.name} is right at {self.coordinates} position"
+# def getChoice():
 
-# Now let's create 2 other vessels of different types
-# Since we have already vessel created with common attributes, we are going inheritance approach
+#     tracker = 0
+#     ntime = int(input("How many times you want to roll ? "))
+#     while tracker < ntime:
+    
+#         dice1 = random.randint(1, 6)
+#         dice2 = random.randint(1, 6)
 
-
-class SupportCraft(Vessels):
-    def __int__(self, name, coordinates=(0, 0), type_of_vessel="support", medical_unit=True):
-        super.__init__(name, coordinates)
-        self.type_of_vessel = type_of_vessel
-        self.medical_unit = medical_unit
+#         print(f"Roll: {tracker+1}")
+#         print(f"You rolled: ({dice1}, {dice2})")
+#         tracker += 1
 
 
-class OffensiveCraft(Vessels):
-    def __init__(self, name, coordinates=(0, 0), shields=False, type_of_vessel="offensive", canons_number=0):
-        super.__init__(name, coordinates)
-        self.shields = shields
-        self.type_of_vessel = type_of_vessel
-        self.canons_number = canons_number
-
-    def shields_up(self):
-        self.shields = True
-        return f"Offensive shields are up for battle"
+# getChoice()
 
 
-class CommandShip(OffensiveCraft):
-    def __init__(self, name, coordinates=(0, 0), cannons=24):
-        super().__init__(name, coordinates, "Command Ship", cannons)
+""" def guessing_number():
+
+    number_to_guess = random.randint(1, 100)
+    counter = 0
+
+    while True:
+
+        guessing_number_entered = input("Enter a number between 1 and 100: ")
+
+        if  not guessing_number_entered.isnumeric():
+            print("Enter a valid number")
+
+        elif int(guessing_number_entered) < number_to_guess:
+            print("Too low !")
+
+        elif int(guessing_number_entered) > number_to_guess:
+            print("Too high !")
+        
+        elif int(guessing_number_entered) == number_to_guess:
+            print(f"Wow you find it in {counter} trials !!")
+            break
+        
+        counter = counter + 1
+
+
+guessing_number() """
+
+
+def get_user_choice(sequence):
+        
+        user_choice = input("Rock, peper, scissors? (r/p/s) ").lower()
+        if user_choice  in sequence:
+           return user_choice
+        
+        else:
+             print("Invalid Choice!!")
+
+def displaying_choices(user_choice, computer_choice):
+
+    print(f"You chose {user_choice}")
+    print(f"Computer chose {computer_choice}")
+
+
+def determine_winner(user_choice, computer_choice):
+    if (
+            (computer_choice == 's' and user_choice == 'p') or 
+             (computer_choice == 'p' and user_choice == 'r') or 
+             (computer_choice == 'r' and user_choice == 's')):
+             print("You lose")
+        
+    elif computer_choice == user_choice:
+            print("It's a tie. Try again!")
+
+    else:
+            print("Congratulations! You won!")
+
+
+
+def rock_paper_scissor():
+    sequence = ("r", "p", "s")
+
+    while True:
+
+        user_choice = get_user_choice(sequence)
+
+        machine_choice = random.choice(sequence)
+
+        displaying_choices(user_choice, machine_choice)
+
+        determine_winner(user_choice, machine_choice)
+
+        should_continue = input('Do you want to continue ? y/n: ').lower()
+        if should_continue == 'n':
+            break
+
+rock_paper_scissor()

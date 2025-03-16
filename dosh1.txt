@@ -1,0 +1,6 @@
+python
+library
+computer
+pilot
+teacher
+village

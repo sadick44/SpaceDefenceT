@@ -1,5 +1,3 @@
-# created by virtualenv automatically
-venv/bin
+venv/ 
+fleet.py
 .idea/
-__pycharm__/
-
